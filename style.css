@@ -29,10 +29,18 @@ padding:18px 8%;
 z-index:999;
 }
 
-.logo{
-font-size:24px;
-font-weight:bold;
+.logo h2{
 color:#d4af37;
+font-size:28px;
+margin:0;
+letter-spacing:2px;
+}
+
+.logo span{
+display:block;
+font-size:12px;
+color:#ffffff;
+margin-top:2px;
 }
 
 nav a{
