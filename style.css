@@ -1,183 +1,826 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+/* ===============================
+   RENTAL MOBIL MAKASSAR
+   MAIN STYLE CSS
+================================ */
+
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-font-family:Arial,Helvetica,sans-serif;
-background:#0d0d0d;
-color:#ffffff;
-line-height:1.6;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background: #ffffff;
+    line-height: 1.6;
 }
 
-header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-background:rgba(0,0,0,.85);
-backdrop-filter:blur(8px);
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 8%;
-z-index:999;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.logo h2{
-color:#d4af37;
-font-size:28px;
-margin:0;
-letter-spacing:2px;
+img {
+    width: 100%;
+    display: block;
 }
 
-.logo span{
-display:block;
-font-size:12px;
-color:#ffffff;
-margin-top:2px;
+ul {
+    list-style: none;
 }
 
-nav a{
-.book-btn{
-background:#d4af37;
-color:#000 !important;
-padding:10px 22px;
-border-radius:30px;
-font-weight:bold;
-margin-left:25px;
-transition:.3s;
+
+/* CONTAINER UTAMA */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
 }
 
-.book-btn:hover{
-background:#fff;
-transform:translateY(-2px);
+
+/* WARNA WEBSITE */
+:root {
+    --primary: #0066ff;
+    --secondary: #ffb000;
+    --dark: #111827;
+    --gray: #6b7280;
+    --light: #f5f7fa;
+    --white: #ffffff;
 }
-color:white;
-text-decoration:none;
-margin-left:25px;
-font-size:15px;
-transition:.3s;
+/* ===============================
+   NAVBAR / HEADER
+================================ */
+
+header {
+    width: 100%;
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
-nav a:hover{
-color:#d4af37;
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
 }
 
-.hero{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7));
+
+/* LOGO */
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--primary);
 }
 
-.hero h1{
-font-size:60px;
-color:#d4af37;
-margin-bottom:20px;
+.logo span {
+    color: var(--secondary);
 }
 
-.hero p{
-font-size:22px;
-margin-bottom:35px;
+
+/* MENU */
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    align-items: center;
 }
 
-.btn{
-display:inline-block;
-padding:15px 35px;
-background:#d4af37;
-color:#000;
-text-decoration:none;
-border-radius:50px;
-font-weight:bold;
-transition:.3s;
+.nav-menu li a {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark);
+    transition: 0.3s;
 }
 
-.btn:hover{
-transform:translateY(-3px);
-box-shadow:0 0 20px #d4af37;
+
+.nav-menu li a:hover {
+    color: var(--primary);
 }
 
-section{
-padding:90px 8%;
+
+/* TOMBOL PESAN */
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.section-title{
-text-align:center;
-font-size:40px;
-color:#d4af37;
-margin-bottom:40px;
+
+.btn-primary:hover {
+    background: #004dcc;
+    transform: translateY(-2px);
+}
+/* ===============================
+   HERO SECTION
+================================ */
+
+.hero {
+    min-height: 85vh;
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)
+    ),
+    url("../images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
 }
 
-footer{
-background:#000;
-padding:35px;
-text-align:center;
-color:#aaa;
+
+.hero-content {
+    max-width: 650px;
+    color: var(--white);
 }
 
-@media(max-width:768px){
 
-.hero h1{
-font-size:38px;
+.hero-content h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 800;
+    margin-bottom: 20px;
 }
 
-.hero p{
-font-size:18px;
+
+.hero-content h1 span {
+    color: var(--secondary);
 }
 
-header{
-padding:15px;
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #eeeeee;
 }
 
-nav{
-display:none;
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
 }
 
-}
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-margin-top:40px;
+
+.btn-whatsapp {
+    background: #25D366;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.card{
-background:#1b1b1b;
-padding:30px;
-border-radius:15px;
-border:1px solid #333;
-transition:.3s;
+
+.btn-whatsapp:hover {
+    background: #1da851;
+    transform: translateY(-2px);
 }
 
-.card:hover{
-transform:translateY(-10px);
-border-color:#d4af37;
-box-shadow:0 10px 30px rgba(212,175,55,.25);
+
+.btn-outline {
+    border: 2px solid white;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.card h3{
-color:#d4af37;
-margin-bottom:15px;
+
+.btn-outline:hover {
+    background: white;
+    color: var(--dark);
+}
+/* ===============================
+   ARMADA MOBIL SECTION
+================================ */
+
+.armada {
+    padding: 80px 0;
+    background: var(--light);
 }
 
-.card p{
-color:#ddd;
-}
-.hero{
-background:
-linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
-url("assets/images/hero.jpg");
 
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+.section-title h2 {
+    font-size: 36px;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+
+.section-title p {
+    color: var(--gray);
+    font-size: 16px;
+}
+
+
+/* GRID MOBIL */
+
+.car-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
+/* CARD MOBIL */
+
+.car-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+
+.car-card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* GAMBAR MOBIL */
+
+.car-card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+
+/* INFORMASI MOBIL */
+
+.car-info {
+    padding: 25px;
+}
+
+
+.car-info h3 {
+    font-size: 22px;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+
+.car-info p {
+    color: var(--gray);
+    margin-bottom: 15px;
+}
+
+
+.car-price {
+    color: var(--primary);
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.car-btn {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+
+.car-btn:hover {
+    background: #004dcc;
+  }
+/* ===============================
+   KEUNGGULAN SECTION
+================================ */
+
+.keunggulan {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+
+.feature-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+
+.feature-card {
+    text-align: center;
+    padding: 30px 20px;
+    background: var(--light);
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+
+.feature-card h3 {
+    font-size: 20px;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+
+.feature-card p {
+    color: var(--gray);
+    font-size: 15px;
+}
+/* ===============================
+   TESTIMONI SECTION
+================================ */
+
+.testimoni {
+    padding: 80px 0;
+    background: var(--light);
+}
+
+
+.testimoni-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
+/* CARD TESTIMONI */
+
+.testimoni-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+
+.testimoni-card p {
+    color: var(--gray);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+
+/* NAMA PELANGGAN */
+
+.customer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.customer img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.customer h4 {
+    color: var(--dark);
+    font-size: 17px;
+}
+
+
+.customer span {
+    color: var(--secondary);
+    font-size: 14px;
+  }
+/* ===============================
+   HARGA RENTAL SECTION
+================================ */
+
+.harga {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+
+.price-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
+/* CARD HARGA */
+
+.price-card {
+    background: var(--light);
+    padding: 35px 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid #eeeeee;
+}
+
+
+.price-card:hover {
+    transform: translateY(-8px);
+}
+
+
+.price-card h3 {
+    font-size: 22px;
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+
+.price {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+
+.price span {
+    font-size: 15px;
+    color: var(--gray);
+    font-weight: normal;
+}
+
+
+.price-list {
+    margin-bottom: 25px;
+}
+
+
+.price-list li {
+    margin-bottom: 10px;
+    color: var(--gray);
+}
+
+
+.price-btn {
+    display: inline-block;
+    background: var(--secondary);
+    color: var(--dark);
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+
+/* ===============================
+   CTA BOOKING
+================================ */
+
+.cta {
+    padding: 70px 0;
+    background: var(--dark);
+    color: var(--white);
+    text-align: center;
+}
+
+
+.cta h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+
+.cta p {
+    color: #d1d5db;
+    margin-bottom: 30px;
+}
+
+
+.cta .btn-whatsapp {
+    display: inline-block;
+  }
+/* ===============================
+   FOOTER SECTION
+================================ */
+
+.footer {
+    background: #0b1220;
+    color: var(--white);
+    padding: 60px 0 20px;
+}
+
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+
+.footer-box h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+
+.footer-box p {
+    color: #cbd5e1;
+    margin-bottom: 10px;
+}
+
+
+.footer-menu li {
+    margin-bottom: 10px;
+}
+
+
+.footer-menu li a {
+    color: #cbd5e1;
+    transition: 0.3s;
+}
+
+
+.footer-menu li a:hover {
+    color: var(--secondary);
+}
+
+
+/* KONTAK */
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+.contact-info a {
+    color: #cbd5e1;
+}
+
+
+.contact-info a:hover {
+    color: #25D366;
+}
+
+
+/* COPYRIGHT */
+
+.copyright {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+}
+/* ===============================
+   RESPONSIVE MOBILE
+================================ */
+
+
+/* TABLET */
+
+@media (max-width: 992px) {
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+
+    .car-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .feature-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .testimoni-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .price-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* HP */
+
+@media (max-width: 600px) {
+
+
+    .container {
+        width: 92%;
+    }
+
+
+    .navbar {
+        height: 70px;
+    }
+
+
+    .logo {
+        font-size: 22px;
+    }
+
+
+    .nav-menu {
+        display: none;
+    }
+
+
+    .hero {
+        min-height: 75vh;
+    }
+
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+
+    .btn-primary,
+    .btn-whatsapp,
+    .btn-outline {
+        text-align: center;
+        width: 100%;
+    }
+
+
+    .car-container,
+    .feature-container,
+    .testimoni-container,
+    .price-container,
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+
+    .cta h2 {
+        font-size: 28px;
+    }
+
+  }
+/* ===============================
+   ANIMASI WEBSITE
+================================ */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+.hero-content {
+    animation: fadeUp 1s ease;
+}
+
+
+.car-card,
+.feature-card,
+.testimoni-card,
+.price-card {
+    animation: fadeUp 0.8s ease;
+}
+
+
+
+/* ===============================
+   FLOATING WHATSAPP BUTTON
+================================ */
+
+.whatsapp-float {
+
+    position: fixed;
+    width: 60px;
+    height: 60px;
+
+    right: 25px;
+    bottom: 25px;
+
+    background: #25D366;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 30px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+
+    z-index: 999;
+
+    transition: 0.3s;
+
+}
+
+
+.whatsapp-float:hover {
+
+    transform: scale(1.1);
+
+}
+
+
+/* ===============================
+   SCROLL BAR
+================================ */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+
+::-webkit-scrollbar-track {
+
+    background: #eeeeee;
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    background: var(--primary);
+
+    border-radius: 10px;
+
   }
