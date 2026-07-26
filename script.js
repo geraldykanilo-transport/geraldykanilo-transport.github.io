@@ -266,3 +266,36 @@ if (backToTop) {
 
 
   }
+/* ===============================
+   COPYRIGHT YEAR AUTO UPDATE
+================================ */
+
+
+const yearElement = document.querySelector(".year");
+
+
+if (yearElement) {
+
+    yearElement.textContent = new Date().getFullYear();
+
+}
+
+
+
+/* ===============================
+   WEBSITE READY CHECK
+================================ */
+
+
+window.addEventListener("load", function() {
+
+
+    document.body.classList.add("loaded");
+
+
+    console.log(
+        "Rental Mobil Makassar website berhasil dimuat"
+    );
+
+
+});
